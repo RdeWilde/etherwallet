@@ -1,5 +1,5 @@
 'use strict';
-var theDaoCtrl = function($scope, $sce, walletService) {
+var theDaoProposalCtrl = function($scope, $sce, walletService) {
 	$scope.curTab = "send";
 	new Modal(document.getElementById('sendTransaction'));
     $scope.voteModal = new Modal(document.getElementById('voteProposal'));
@@ -206,4 +206,4 @@ var theDaoCtrl = function($scope, $sce, walletService) {
 		uiFuncs.sendTx($scope, $sce);
 	}
 };
-module.exports = theDaoCtrl;
+module.exports = theDaoProposalCtrl;

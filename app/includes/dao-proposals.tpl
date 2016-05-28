@@ -8,7 +8,7 @@
     </div>
   </section>
 
-  <section class="row" style="margin-bottom: 10px;" ng-controller='theDaoProposalCtrl'>
+  <section class="row" style="margin-bottom: 10px;" >
     <div class="col-xs-12">
       <h4> Show.... </h4>
       <div class="bg-primary">
@@ -21,7 +21,16 @@
     </div>
   </section>
 
-  <div class="proposal-container">
+  <div class="proposal-container" ng-controller='theDaoProposalCtrl'>
+
+        <div class="form-group col-xs-12 clearfix">
+          <label> Proposal ID </label>
+          <input class="form-control" type="text" placeholder="0" ng-model="proposalId"/>
+        </div>
+        <div class="form-group col-xs-12 clearfix">
+              <a class="btn btn-primary" ng-click="setProposal()">LOAD PROPOSAL</a>
+        </div>
+        <div class="form-group col-xs-12 clearfix" ng-bind-html="loadProposalStatus"></div>
 
     <dao-proposal-drtv></dao-proposal-drtv>
 
